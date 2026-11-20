@@ -2,7 +2,7 @@
 
 A GitHub Action rebuilds a public web page every 30 minutes on weekdays and publishes it with GitHub Pages:
 
-**https://ashumathura.github.io/trader/**
+**https://product-velocity.github.io/trader/**
 
 It covers a fixed list of twelve stocks (see `watchlist.json`) with technical analysis, a hidden-Markov regime model, price levels, news, market trends and an event calendar. **It contains no personal data**: no holdings, quantities, purchase prices or links to private sheets.
 

@@ -50,7 +50,7 @@ const safeUrl = u => /^https?:\/\//i.test(u) ? esc(u) : "#";
 const store = {get(k){try{return localStorage.getItem(k)||""}catch(e){return ""}}, set(k,v){try{localStorage.setItem(k,v)}catch(e){}}, del(k){try{localStorage.removeItem(k)}catch(e){}}};
 // Served by dashboard/serve.py on localhost: use the data it builds on this computer. Opened from disk: use GitHub Pages.
 const LOCAL = /^https?:$/.test(location.protocol) && /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
-const DEFAULT_BASE = LOCAL ? new URL("../docs/data", location.href).href : "https://ashumathura.github.io/trader/data";
+const DEFAULT_BASE = LOCAL ? new URL("../docs/data", location.href).href : "https://product-velocity.github.io/trader/data";
 const fmt = (x, d=2) => x == null || isNaN(x) ? "-" : Number(x).toLocaleString(undefined, {minimumFractionDigits:d, maximumFractionDigits:d});
 const pct = x => x == null || isNaN(x) ? '<span class="mut">-</span>' : `<span class="${x>=0?"up":"dn"}">${x>=0?"+":""}${fmt(x)}%</span>`;
 let state = {rows: [], sort: "value", desc: true, csvText: ""};
